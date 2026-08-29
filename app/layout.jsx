@@ -1,4 +1,5 @@
 import './globals.css';
+import Link from 'next/link';
 import Header from '../components/Header.jsx';
 
 export const metadata = {
@@ -12,7 +13,10 @@ export default function RootLayout({ children }) {
       <body>
         <Header />
         <main>{children}</main>
-        <footer>豆阵 · 原创拼豆工程图纸 · 仅售作品图纸，不含材料</footer>
+        <footer>
+          <span>豆阵 · 原创拼豆工程图纸 · 仅售作品图纸，不含材料</span>
+          <Link href="/privacy">隐私政策</Link>
+        </footer>
       </body>
     </html>
   );
